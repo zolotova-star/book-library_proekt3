@@ -5,11 +5,11 @@
 class BookFilter:
     """Класс для фильтрации и сортировки коллекции книг."""
 
-    def search_books(self, books, **kwargs):
+    def search_books(self, books, **kwargs): #любое количество аргументов по типу автор и год, или только автор
         """Универсальный поиск книг по нескольким критериям."""
-        results = books #нужно временную переменную, чтобы книги обновлялись
+        results = books #нужно временную переменную, чтобы списки книг обновлялись
 
-        for key, value in kwargs.items():
+        for key, value in kwargs.items(): #key='author', value='Толстой'
             if value is None:
                 continue
 

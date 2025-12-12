@@ -1,8 +1,6 @@
 import psycopg2
 
 def create_database():
-    print("Creating database for book library...")
-
     try:
         conn = psycopg2.connect(
             dbname="postgres",
@@ -11,11 +9,10 @@ def create_database():
             host="localhost",
             port="5432"
         )
-        conn.autocommit = True
+        conn.autocommit = True #автоматического сохранения изменений.
         cur = conn.cursor()
 
         cur.execute("CREATE DATABASE book_library")
-        print("Database created")
 
         cur.close()
         conn.close()
@@ -38,7 +35,6 @@ def create_database():
                 genre TEXT NOT NULL
             )
         """)
-        print("Table books created")
 
         cur.execute("""
             CREATE TABLE quotes (
@@ -48,13 +44,10 @@ def create_database():
                 FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
             )
         """)
-        print("Table quotes created")
 
         conn.commit()
         cur.close()
         conn.close()
-
-        print("Database created successfully!")
 
     except Exception as e:
         print(f"Error: {e}")

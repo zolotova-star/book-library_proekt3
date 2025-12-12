@@ -7,7 +7,7 @@ class Book:
         self.quotes = quotes or []
         self.id = None
 
-    def to_dict(self):
+    def to_dict(self): #метод преобразования в словарь.
         return {
             'title': self.title,
             'author': self.author,
@@ -15,16 +15,6 @@ class Book:
             'genre': self.genre,
             'quotes': self.quotes
         }
-
-    @classmethod
-    def from_dict(cls, data):
-        return cls(
-            title=data['title'],
-            author=data['author'],
-            year=data['year'],
-            genre=data['genre'],
-            quotes=data.get('quotes', [])
-        )
 
     def __str__(self):
         return f"'{self.title}' - {self.author} ({self.year})"

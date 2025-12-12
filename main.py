@@ -1,15 +1,19 @@
 import argparse
-from booklib.commands import LibraryCommands
+from booklib import LibraryCommands
 
 def main():
-    parser = argparse.ArgumentParser(description='Книжная библиотека (PostgreSQL)')
-    # Убираем --file
-
+    parser = argparse.ArgumentParser(description='Книжная библиотека.') #создаем пустой шаблок для объекта с классом, который будет преобразовывать строку
     subparsers = parser.add_subparsers(dest='command')
+
+    # ДОБАВЛЕНО: Команда создания БД
+    create_db_parser = subparsers.add_parser('create-db', help='Создать базу данных')
+
+    # ДОБАВЛЕНО: Команда проверки БД
+    check_parser = subparsers.add_parser('check', help='Проверить подключение к БД')
 
     # Команда добавления книги
     add_parser = subparsers.add_parser('add', help='Добавить книгу')
-    add_parser.add_argument('--title', required=True)
+    add_parser.add_argument('--title', required=True) #обязательный аргумент
     add_parser.add_argument('--author', required=True)
     add_parser.add_argument('--year', required=True, type=int)
     add_parser.add_argument('--genre', required=True)
@@ -19,8 +23,8 @@ def main():
     remove_parser.add_argument('--author', help='Автор')
 
     list_parser = subparsers.add_parser('list', help='Список книг')
-    list_parser.add_argument('--sort-by', choices=['title', 'author', 'year', 'genre'], default='title')
-    list_parser.add_argument('--reverse', action='store_true')
+    list_parser.add_argument('--sort-by', choices=['title', 'author', 'year', 'genre'], default='title') #сколько значений можешь ввести
+    list_parser.add_argument('--reverse', action='store_true') #флаг (переключатель), который либо есть, либо его нет.
 
     search_parser = subparsers.add_parser('search', help='Поиск')
     search_parser.add_argument('--author', help='Автор')
@@ -42,19 +46,9 @@ def main():
     show_quotes_parser.add_argument('--title', help='Название')
     show_quotes_parser.add_argument('--author', help='Автор')
 
-    # Команда: создать БД
-    create_db_parser = subparsers.add_parser('create-db', help='Создать базу данных')
-
-    # Команда: проверить БД
-    check_parser = subparsers.add_parser('check', help='Проверить БД')
-
     # Команда: экспорт в CSV
     export_parser = subparsers.add_parser('export', help='Экспорт в CSV')
-    export_parser.add_argument('--file', default='library_export.csv', help='Имя файла')
-
-    # Команда: удалить БД
-    drop_db_parser = subparsers.add_parser('drop-db', help='Удалить базу данных (ОПАСНО!)')
-    drop_db_parser.add_argument('--confirm', action='store_true', help='Подтвердить удаление')
+    export_parser.add_argument('--file', default='export.csv', help='Имя файла')
 
     # Команда: очистить данные
     clear_parser = subparsers.add_parser('clear-db', help='Очистить все данные из таблиц (безопасно)')
@@ -71,43 +65,30 @@ def main():
 
     args = parser.parse_args()
 
+    #если нет введенной команды, выведем справочник команд
     if not args.command:
         parser.print_help()
         return
-
+    #если введено создание базы, то мы загружаем функцию create_database из файла create_db.py
     if args.command == 'create-db':
         from create_db import create_database
-        create_database()
+        create_database() #начинаем функцию
         return
 
     if args.command == 'check':
         try:
-            from booklib.storage import LibraryStorage
-            storage = LibraryStorage()
-            print(f"База данных подключена")
-            print(f"Книг в базе: {len(storage.books)}")
+            from booklib.storage import LibraryStorage # Загружает класс LibraryStorage из файла booklib/storage.py.
+            storage = LibraryStorage() #создаем объект
+            print(f"база данных подключена")
+            print(f"книг в базе: {len(storage.books)}")
         except Exception as e:
             print(f"Ошибка: {e}")
         return
 
-    if args.command == 'export':
-        import csv
-        from booklib.storage import LibraryStorage
-        storage = LibraryStorage()
-
-        with open(args.file, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            writer.writerow(['title', 'author', 'year', 'genre', 'quotes'])
-            for book in storage.books:
-                quotes_str = '|'.join(book.quotes)
-                writer.writerow([book.title, book.author, book.year, book.genre, quotes_str])
-
-        print(f"Экспортировано {len(storage.books)} книг в {args.file}")
-        return
-
     # Обработка остальных команд
-    commands = LibraryCommands()  # Без параметра
+    commands = LibraryCommands()
 
+    # 3. Команды, которые требуют LibraryCommands
     if args.command == 'add':
         commands.add_book(args.title, args.author, args.year, args.genre)
     elif args.command == 'remove':
@@ -122,19 +103,14 @@ def main():
         commands.remove_quote(args.title, args.author, args.quote_index)
     elif args.command == 'show-quotes':
         commands.show_quotes(args.title, args.author)
-    elif args.command == 'drop-db':
-        if args.confirm:
-            commands.drop_database()
-        else:
-            print("⚠️  ОПАСНО: Эта команда удалит ВСЮ базу данных!")
-            print("Используйте: python main.py drop-db --confirm")
+    elif args.command == 'export':
+        commands.export_to_csv(args.file)  # ← БЕЗ повторного создания!
     elif args.command == 'clear-db':
         if args.confirm:
             commands.clear_database()
         else:
-            print("⚠️  Эта команда удалит ВСЕ данные из таблиц!")
             print("Используйте: python main.py clear-db --confirm")
-    elif args.command == 'edit':  # ← ДОБАВЬ ЭТОТ БЛОК В НУЖНОМ МЕСТЕ!
+    elif args.command == 'edit':
         commands.edit_book(
             args.title, args.author,
             args.new_title, args.new_author,
