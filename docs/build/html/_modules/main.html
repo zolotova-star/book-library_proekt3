@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main &mdash; документация Book Library 1.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Book Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Основная документация:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../booklib.html">Модуль booklib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../booklib/models.html">Модуль models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../booklib/models.html#booklib.models.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.author"><code class="docutils literal notranslate"><span class="pre">Book.author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.year"><code class="docutils literal notranslate"><span class="pre">Book.year</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.genre"><code class="docutils literal notranslate"><span class="pre">Book.genre</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.quotes"><code class="docutils literal notranslate"><span class="pre">Book.quotes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.id"><code class="docutils literal notranslate"><span class="pre">Book.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.__init__"><code class="docutils literal notranslate"><span class="pre">Book.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.__str__"><code class="docutils literal notranslate"><span class="pre">Book.__str__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/models.html#booklib.models.Book.to_dict"><code class="docutils literal notranslate"><span class="pre">Book.to_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../booklib/commands.html">Модуль commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands"><code class="docutils literal notranslate"><span class="pre">LibraryCommands</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.storage"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.storage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.add_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.clear_database"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.clear_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.edit_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.edit_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.list_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.list_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.search_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/commands.html#booklib.commands.LibraryCommands.show_quotes"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.show_quotes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../booklib/storage.html">Модуль storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage"><code class="docutils literal notranslate"><span class="pre">LibraryStorage</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.books</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage._connect"><code class="docutils literal notranslate"><span class="pre">LibraryStorage._connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.add_quote_to_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_quote_to_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.get_all_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.get_all_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.load_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.load_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/storage.html#booklib.storage.LibraryStorage.update_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.update_book()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../booklib/filters.html">Модуль filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../booklib/filters.html#booklib.filters.BookFilter"><code class="docutils literal notranslate"><span class="pre">BookFilter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/filters.html#booklib.filters.BookFilter.search_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../booklib/filters.html#booklib.filters.BookFilter.sort_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.sort_books()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Скрипты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../main.html">Основной скрипт (main.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../create_db.html">Скрипт создания БД (create_db.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../create_db.html#create_db.create_database"><code class="docutils literal notranslate"><span class="pre">create_database()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Book Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Код модуля</a></li>
+      <li class="breadcrumb-item active">main</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Исходный код main</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Основной модуль командной строки для управления книжной библиотекой.</span>
+
+<span class="sd">Предоставляет интерфейс командной строки для работы с книжной библиотекой</span>
+<span class="sd">через PostgreSQL. Поддерживает все основные операции CRUD для книг и цитат,</span>
+<span class="sd">а также дополнительные функции экспорта, импорта и управления базой данных.</span>
+
+<span class="sd">Основные команды:</span>
+<span class="sd">    create-db-Создание базы данных и таблиц</span>
+<span class="sd">    check- Проверка подключения и состояния БД</span>
+<span class="sd">    add-Добавление новой книги</span>
+<span class="sd">    remove-Удаление книги</span>
+<span class="sd">    list-Просмотр списка книг с сортировкой</span>
+<span class="sd">    search-Поиск книг по критериям</span>
+<span class="sd">    add-quote-Добавление цитаты к книге</span>
+<span class="sd">    remove-quote-Удаление цитаты из книги</span>
+<span class="sd">    show-quotes-Просмотр цитат</span>
+<span class="sd">    export-Экспорт данных в CSV</span>
+<span class="sd">    clear-db-Очистка всех данных из таблиц</span>
+<span class="sd">    edit-Редактирование информации о книге</span>
+
+<span class="sd">Примеры использования:</span>
+<span class="sd">    python main.py create-db</span>
+<span class="sd">    python main.py add --title &quot;Война и мир&quot; --author &quot;Толстой&quot; --year 1869 --genre &quot;Роман&quot;</span>
+<span class="sd">    python main.py list --sort-by author --reverse</span>
+<span class="sd">    python main.py search --author &quot;Толстой&quot; --genre &quot;Роман&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">booklib</span><span class="w"> </span><span class="kn">import</span> <span class="n">LibraryCommands</span>
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../main.html#main.main">[документация]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Основная функция обработки командной строки.</span>
+
+<span class="sd">    Создает парсер аргументов, определяет все доступные команды и их параметры,</span>
+<span class="sd">    затем вызывает соответствующие методы LibraryCommands для выполнения операций.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        SystemExit: При вызове с флагом --help или при ошибках парсинга аргументов.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: Функция ничего не возвращает, но выводит результаты в консоль.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Создаем парсер аргументов командной строки</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Книжная библиотека.&#39;</span><span class="p">)</span>
+    <span class="n">subparsers</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">add_subparsers</span><span class="p">(</span><span class="n">dest</span><span class="o">=</span><span class="s1">&#39;command&#39;</span><span class="p">)</span>
+
+    <span class="n">create_db_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;create-db&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Создать базу данных&#39;</span><span class="p">)</span>
+    <span class="n">check_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;check&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Проверить подключение к БД&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда добавления книги</span>
+    <span class="n">add_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Добавить книгу&#39;</span><span class="p">)</span>
+    <span class="n">add_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># обязательный аргумент</span>
+    <span class="n">add_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--year&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">add_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--genre&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Команда удаления книги</span>
+    <span class="n">remove_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Удалить книгу&#39;</span><span class="p">)</span>
+    <span class="n">remove_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Название&#39;</span><span class="p">)</span>
+    <span class="n">remove_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Автор&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда списка книг</span>
+    <span class="n">list_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Список книг&#39;</span><span class="p">)</span>
+    <span class="n">list_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--sort-by&#39;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;genre&#39;</span><span class="p">],</span>
+                             <span class="n">default</span><span class="o">=</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>  <span class="c1"># выбор сортировки</span>
+    <span class="n">list_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--reverse&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">)</span>  <span class="c1"># флаг обратной сортировки</span>
+
+    <span class="c1"># Команда поиска</span>
+    <span class="n">search_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;search&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Поиск&#39;</span><span class="p">)</span>
+    <span class="n">search_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Автор&#39;</span><span class="p">)</span>
+    <span class="n">search_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Название&#39;</span><span class="p">)</span>
+    <span class="n">search_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--year&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Год&#39;</span><span class="p">)</span>
+    <span class="n">search_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--genre&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Жанр&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда добавления цитаты</span>
+    <span class="n">add_quote_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;add-quote&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Добавить цитату&#39;</span><span class="p">)</span>
+    <span class="n">add_quote_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_quote_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_quote_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--quote&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Команда удаления цитаты</span>
+    <span class="n">remove_quote_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;remove-quote&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Удалить цитату&#39;</span><span class="p">)</span>
+    <span class="n">remove_quote_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">remove_quote_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">remove_quote_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--quote-index&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Номер цитаты&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда показа цитат</span>
+    <span class="n">show_quotes_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;show-quotes&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Показать цитаты&#39;</span><span class="p">)</span>
+    <span class="n">show_quotes_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Название&#39;</span><span class="p">)</span>
+    <span class="n">show_quotes_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Автор&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда экспорта в CSV</span>
+    <span class="n">export_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;export&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Экспорт в CSV&#39;</span><span class="p">)</span>
+    <span class="n">export_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--file&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;export.csv&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Имя файла&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда очистки данных</span>
+    <span class="n">clear_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;clear-db&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Очистить все данные из таблиц (безопасно)&#39;</span><span class="p">)</span>
+    <span class="n">clear_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--confirm&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Подтвердить очистку&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Команда редактирования книги</span>
+    <span class="n">edit_parser</span> <span class="o">=</span> <span class="n">subparsers</span><span class="o">.</span><span class="n">add_parser</span><span class="p">(</span><span class="s1">&#39;edit&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Редактировать книгу&#39;</span><span class="p">)</span>
+    <span class="n">edit_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Текущее название&#39;</span><span class="p">)</span>
+    <span class="n">edit_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--author&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Текущий автор&#39;</span><span class="p">)</span>
+    <span class="n">edit_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--new-title&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Новое название&#39;</span><span class="p">)</span>
+    <span class="n">edit_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--new-author&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Новый автор&#39;</span><span class="p">)</span>
+    <span class="n">edit_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--new-year&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Новый год&#39;</span><span class="p">)</span>
+    <span class="n">edit_parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--new-genre&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Новый жанр&#39;</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="c1"># Если нет введенной команды, выводим справочник команд</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span><span class="p">:</span>
+        <span class="n">parser</span><span class="o">.</span><span class="n">print_help</span><span class="p">()</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Если введено создание базы, загружаем функцию из create_db.py</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;create-db&#39;</span><span class="p">:</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">create_db</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_database</span>
+        <span class="n">create_database</span><span class="p">()</span>  <span class="c1"># начинаем функцию</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;check&#39;</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">import</span><span class="w"> </span><span class="nn">psycopg2</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+                <span class="n">database</span><span class="o">=</span><span class="s2">&quot;book_library&quot;</span><span class="p">,</span>
+                <span class="n">user</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+                <span class="n">password</span><span class="o">=</span><span class="s2">&quot;11111&quot;</span><span class="p">,</span>
+                <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+                <span class="n">client_encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span>
+            <span class="p">)</span>
+
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+                <span class="s2">&quot;SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = &#39;books&#39;)&quot;</span><span class="p">)</span>  <span class="c1"># возвращает true или false поиск таблицы книги</span>
+            <span class="n">books_table_exists</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># t или f</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = &#39;quotes&#39;)&quot;</span><span class="p">)</span>
+            <span class="n">quotes_table_exists</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c1"># Считаем количество книг</span>
+            <span class="k">if</span> <span class="n">books_table_exists</span><span class="p">:</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT COUNT(*) FROM books&quot;</span><span class="p">)</span>
+                <span class="n">books_count</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">books_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Таблица &#39;books&#39; существует: </span><span class="si">{</span><span class="s1">&#39;Да&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">books_table_exists</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;Нет&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Таблица &#39;quotes&#39; существует: </span><span class="si">{</span><span class="s1">&#39;Да&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">quotes_table_exists</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;Нет&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Книг в базе: </span><span class="si">{</span><span class="n">books_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">OperationalError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># Ошибка подключения</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка подключения: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">commands</span> <span class="o">=</span> <span class="n">LibraryCommands</span><span class="p">()</span>
+
+    <span class="c1"># Обработка команды добавления книги</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;add&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">add_book</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">genre</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды удаления книги</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;remove&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">remove_book</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды списка книг</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;list&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">list_books</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">sort_by</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">reverse</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды поиска</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;search&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">search_books</span><span class="p">(</span><span class="n">author</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">genre</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">genre</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды добавления цитаты</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;add-quote&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">add_quote</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">quote</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды удаления цитаты</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;remove-quote&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">remove_quote</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">quote_index</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды показа цитат</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;show-quotes&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">show_quotes</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды экспорта</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;export&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">export_to_csv</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">file</span><span class="p">)</span>  <span class="c1"># используем переданное имя файла</span>
+
+    <span class="c1"># Обработка команды очистки базы данных</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;clear-db&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">confirm</span><span class="p">:</span>
+            <span class="n">commands</span><span class="o">.</span><span class="n">clear_database</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Используйте: python main.py clear-db --confirm&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Обработка команды редактирования книги</span>
+    <span class="k">elif</span> <span class="n">args</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;edit&#39;</span><span class="p">:</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">edit_book</span><span class="p">(</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">author</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">new_title</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">new_author</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">new_year</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">new_genre</span>
+        <span class="p">)</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Точка входа при прямом запуске скрипта.</span>
+
+<span class="sd">    При запуске скрипта напрямую вызывает функцию main(),</span>
+<span class="sd">    которая обрабатывает аргументы командной строки.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, Dasha. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

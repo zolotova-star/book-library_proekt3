@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>booklib.filters &mdash; документация Book Library 1.0</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/translations.js?v=cd1d70c9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Book Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Основная документация:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib.html">Модуль booklib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/models.html">Модуль models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.author"><code class="docutils literal notranslate"><span class="pre">Book.author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.year"><code class="docutils literal notranslate"><span class="pre">Book.year</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.genre"><code class="docutils literal notranslate"><span class="pre">Book.genre</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.quotes"><code class="docutils literal notranslate"><span class="pre">Book.quotes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.id"><code class="docutils literal notranslate"><span class="pre">Book.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.__init__"><code class="docutils literal notranslate"><span class="pre">Book.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.__str__"><code class="docutils literal notranslate"><span class="pre">Book.__str__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.to_dict"><code class="docutils literal notranslate"><span class="pre">Book.to_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/commands.html">Модуль commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands"><code class="docutils literal notranslate"><span class="pre">LibraryCommands</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.storage"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.storage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.add_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.clear_database"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.clear_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.edit_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.edit_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.list_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.list_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.search_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.show_quotes"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.show_quotes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/storage.html">Модуль storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage"><code class="docutils literal notranslate"><span class="pre">LibraryStorage</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.books</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage._connect"><code class="docutils literal notranslate"><span class="pre">LibraryStorage._connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.add_quote_to_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_quote_to_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.get_all_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.get_all_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.load_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.load_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.update_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.update_book()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/filters.html">Модуль filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/filters.html#booklib.filters.BookFilter"><code class="docutils literal notranslate"><span class="pre">BookFilter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/filters.html#booklib.filters.BookFilter.search_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/filters.html#booklib.filters.BookFilter.sort_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.sort_books()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Скрипты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../main.html">Основной скрипт (main.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../create_db.html">Скрипт создания БД (create_db.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../create_db.html#create_db.create_database"><code class="docutils literal notranslate"><span class="pre">create_database()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Book Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Код модуля</a></li>
+      <li class="breadcrumb-item active">booklib.filters</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Исходный код booklib.filters</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Модуль для поиска и сортировки книг.</span>
+
+<span class="sd">Содержит класс BookFilter, который предоставляет методы для фильтрации</span>
+<span class="sd">книг по различным критериям и их сортировки по выбранным полям.</span>
+
+<span class="sd">Классы:</span>
+<span class="sd">    BookFilter: Основной класс для фильтрации и сортировки книг.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="BookFilter">
+<a class="viewcode-back" href="../../booklib/filters.html#booklib.filters.BookFilter">[документация]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BookFilter</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс для фильтрации и сортировки коллекций книг.</span>
+
+<span class="sd">    Предоставляет методы для поиска книг по различным критериям</span>
+<span class="sd">    (автор, название, год, жанр) и сортировки результатов.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BookFilter.search_books">
+<a class="viewcode-back" href="../../booklib/filters.html#booklib.filters.BookFilter.search_books">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">search_books</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">books</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Универсальный поиск книг по нескольким критериям.</span>
+
+<span class="sd">        Ищет книги в переданной коллекции по указанным критериям.</span>
+<span class="sd">        Поддерживает поиск по автору, названию, году и жанру.</span>
+<span class="sd">        Критерии можно комбинировать.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            books (list): Список объектов Book для поиска.</span>
+<span class="sd">            **kwargs: Ключевые аргументы для фильтрации. Возможные ключи:</span>
+<span class="sd">                author (str, optional): Часть имени автора для поиска.</span>
+<span class="sd">                title (str, optional): Часть названия книги для поиска.</span>
+<span class="sd">                year (int, optional): Точный год издания.</span>
+<span class="sd">                genre (str, optional): Часть названия жанра для поиска.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: Список объектов Book, удовлетворяющих всем критериям поиска.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Поиск по строковым полям (автор, название, жанр) не чувствителен</span>
+<span class="sd">            к регистру. Год проверяется на точное совпадение.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">books</span>  <span class="c1"># нужно временную переменную, чтобы списки книг обновлялись</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># key=&#39;author&#39;, value=&#39;Толстой&#39;</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;author&#39;</span><span class="p">:</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">results</span> <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">b</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">results</span> <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">b</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">results</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">value</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;genre&#39;</span><span class="p">:</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">results</span> <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">b</span><span class="o">.</span><span class="n">genre</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+
+        <span class="k">return</span> <span class="n">results</span></div>
+
+
+<div class="viewcode-block" id="BookFilter.sort_books">
+<a class="viewcode-back" href="../../booklib/filters.html#booklib.filters.BookFilter.sort_books">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sort_books</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">books</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Сортирует книги по указанному полю.</span>
+
+<span class="sd">        Сортирует список книг по возрастанию или убыванию (если reverse=True)</span>
+<span class="sd">        по выбранному полю.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            books (list): Список объектов Book для сортировки.</span>
+<span class="sd">            sort_by (str, optional): Поле для сортировки. Возможные значения:</span>
+<span class="sd">                &#39;title&#39; - по названию (по умолчанию)</span>
+<span class="sd">                &#39;author&#39; - по автору</span>
+<span class="sd">                &#39;year&#39; - по году издания</span>
+<span class="sd">                &#39;genre&#39; - по жанру</span>
+<span class="sd">            reverse (bool, optional): Если True, сортировка в обратном порядке.</span>
+<span class="sd">                По умолчанию False.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: Отсортированный список объектов Book.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Если указано неизвестное поле сортировки, возвращается исходный</span>
+<span class="sd">            список без изменений.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">sort_by</span> <span class="o">==</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">sort_by</span> <span class="o">==</span> <span class="s1">&#39;author&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">sort_by</span> <span class="o">==</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">sort_by</span> <span class="o">==</span> <span class="s1">&#39;genre&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">genre</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">books</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, Dasha. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

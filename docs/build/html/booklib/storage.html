@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Модуль storage &mdash; документация Book Library 1.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=cd1d70c9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Модуль filters" href="filters.html" />
+    <link rel="prev" title="Модуль commands" href="commands.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Book Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Основная документация:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../booklib.html">Модуль booklib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Модуль models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models.html#booklib.models.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.author"><code class="docutils literal notranslate"><span class="pre">Book.author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.year"><code class="docutils literal notranslate"><span class="pre">Book.year</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.genre"><code class="docutils literal notranslate"><span class="pre">Book.genre</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.quotes"><code class="docutils literal notranslate"><span class="pre">Book.quotes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.id"><code class="docutils literal notranslate"><span class="pre">Book.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.__init__"><code class="docutils literal notranslate"><span class="pre">Book.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.__str__"><code class="docutils literal notranslate"><span class="pre">Book.__str__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html#booklib.models.Book.to_dict"><code class="docutils literal notranslate"><span class="pre">Book.to_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Модуль commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands"><code class="docutils literal notranslate"><span class="pre">LibraryCommands</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.storage"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.storage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.add_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.clear_database"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.clear_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.edit_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.edit_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.list_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.list_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.search_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#booklib.commands.LibraryCommands.show_quotes"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.show_quotes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Модуль storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#booklib.storage.LibraryStorage"><code class="docutils literal notranslate"><span class="pre">LibraryStorage</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.books</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage._connect"><code class="docutils literal notranslate"><span class="pre">LibraryStorage._connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.add_quote_to_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_quote_to_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.get_all_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.get_all_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.load_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.load_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#booklib.storage.LibraryStorage.update_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.update_book()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Модуль filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="filters.html#booklib.filters.BookFilter"><code class="docutils literal notranslate"><span class="pre">BookFilter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="filters.html#booklib.filters.BookFilter.search_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters.html#booklib.filters.BookFilter.sort_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.sort_books()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Скрипты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../main.html">Основной скрипт (main.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../create_db.html">Скрипт создания БД (create_db.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../create_db.html#create_db.create_database"><code class="docutils literal notranslate"><span class="pre">create_database()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Book Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Модуль storage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/booklib/storage.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-booklib.storage">
+<span id="storage"></span><h1>Модуль storage<a class="headerlink" href="#module-booklib.storage" title="Ссылка на этот заголовок"></a></h1>
+<p>Модуль для работы с хранением данных книжной библиотеки в PostgreSQL.</p>
+<p>Содержит класс LibraryStorage, который обеспечивает взаимодействие
+с базой данных PostgreSQL для операций CRUD (создание, чтение, обновление,
+удаление) с книгами и цитатами.</p>
+<dl class="simple">
+<dt>Классы:</dt><dd><p>LibraryStorage: Основной класс для работы с хранилищем данных.</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LibraryStorage</span></span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage" title="Ссылка на это определение"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для управления хранением данных книжной библиотеки в PostgreSQL.</p>
+<p>Обеспечивает загрузку, сохранение, обновление и удаление книг и цитат
+из базы данных. Также поддерживает локальный кеш загруженных книг
+для повышения производительности.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.books">
+<span class="sig-name descname"><span class="pre">books</span></span><a class="headerlink" href="#booklib.storage.LibraryStorage.books" title="Ссылка на это определение"></a></dt>
+<dd><p>Локальный кеш загруженных книг (объектов Book).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.__init__"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.__init__" title="Ссылка на это определение"></a></dt>
+<dd><p>Инициализирует объект LibraryStorage и загружает книги из БД.</p>
+<p>При создании объекта автоматически загружает все книги
+из базы данных в локальный кеш.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage._connect">
+<span class="sig-name descname"><span class="pre">_connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage._connect"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage._connect" title="Ссылка на это определение"></a></dt>
+<dd><p>Создает подключение к базе данных PostgreSQL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Объект подключения к БД.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>psycopg2.extensions.connection</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Параметры подключения жестко закодированы в методе.
+Для продакшн-окружения рекомендуется выносить их в конфигурационный файл.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.add_book">
+<span class="sig-name descname"><span class="pre">add_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.add_book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.add_book" title="Ссылка на это определение"></a></dt>
+<dd><p>Добавляет новую книгу в базу данных.</p>
+<p>Сохраняет книгу в таблицу books и все связанные с ней цитаты
+в таблицу quotes. Также обновляет локальный кеш.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>book</strong> (<a class="reference internal" href="models.html#booklib.models.Book" title="booklib.models.Book"><em>Book</em></a>) – Объект книги для добавления.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>После успешного добавления объекту book присваивается
+сгенерированный БД идентификатор (id).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.add_quote_to_book">
+<span class="sig-name descname"><span class="pre">add_quote_to_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.add_quote_to_book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.add_quote_to_book" title="Ссылка на это определение"></a></dt>
+<dd><p>Добавляет цитату к существующей книге.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>book_id</strong> (<em>int</em>) – Идентификатор книги, к которой добавляется цитата.</p></li>
+<li><p><strong>quote</strong> (<em>str</em>) – Текст цитаты для добавления.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Метод ничего не возвращает, но обновляет БД и локальный кеш.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.export_to_csv">
+<span class="sig-name descname"><span class="pre">export_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'export.csv'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.export_to_csv"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.export_to_csv" title="Ссылка на это определение"></a></dt>
+<dd><p>Экспортирует все книги и цитаты в CSV файл.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – Имя файла для экспорта.
+По умолчанию „export.csv“.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Цитаты в файле разделяются символом „|“.
+Файл создается в кодировке UTF-8.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.get_all_books">
+<span class="sig-name descname"><span class="pre">get_all_books</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.get_all_books"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.get_all_books" title="Ссылка на это определение"></a></dt>
+<dd><p>Возвращает все книги из локального кеша.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список всех объектов Book, загруженных в память.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Если требуется свежие данные из БД, следует вызвать load_books()
+или пересоздать объект LibraryStorage.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.load_books">
+<span class="sig-name descname"><span class="pre">load_books</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.load_books"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.load_books" title="Ссылка на это определение"></a></dt>
+<dd><p>Загружает все книги и их цитаты из базы данных.</p>
+<p>Выполняет запросы к таблицам books и quotes для получения
+полной информации о книгах и связанных с ними цитатах.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список объектов Book, загруженных из базы данных.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В случае ошибки подключения или выполнения запроса
+метод возвращает пустой список.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.remove_book">
+<span class="sig-name descname"><span class="pre">remove_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.remove_book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.remove_book" title="Ссылка на это определение"></a></dt>
+<dd><p>Удаляет книгу из базы данных по идентификатору.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>book_id</strong> (<em>int</em>) – Идентификатор книги для удаления.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Благодаря каскадному удалению (ON DELETE CASCADE) все цитаты,
+связанные с книгой, также будут автоматически удалены.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.remove_quote">
+<span class="sig-name descname"><span class="pre">remove_quote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quote_index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.remove_quote"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.remove_quote" title="Ссылка на это определение"></a></dt>
+<dd><p>Удаляет цитату из книги по индексу.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>book_id</strong> (<em>int</em>) – Идентификатор книги, из которой удаляется цитата.</p></li>
+<li><p><strong>quote_index</strong> (<em>int</em>) – Индекс цитаты в списке (начиная с 0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>True если цитата успешно удалена, False в противном случае.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Метод удаляет цитату как из базы данных, так и из локального кеша.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="booklib.storage.LibraryStorage.update_book">
+<span class="sig-name descname"><span class="pre">update_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_book</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_book</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/booklib/storage.html#LibraryStorage.update_book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#booklib.storage.LibraryStorage.update_book" title="Ссылка на это определение"></a></dt>
+<dd><p>Обновляет информацию о книге в базе данных.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>old_book</strong> (<a class="reference internal" href="models.html#booklib.models.Book" title="booklib.models.Book"><em>Book</em></a>) – Исходный объект книги (с оригинальными данными).</p></li>
+<li><p><strong>new_book</strong> (<a class="reference internal" href="models.html#booklib.models.Book" title="booklib.models.Book"><em>Book</em></a>) – Обновленный объект книги с новыми данными.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Метод обновляет запись в БД и локальный кеш.
+Идентификатор книги (id) остается неизменным.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="commands.html" class="btn btn-neutral float-left" title="Модуль commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="filters.html" class="btn btn-neutral float-right" title="Модуль filters" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, Dasha. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

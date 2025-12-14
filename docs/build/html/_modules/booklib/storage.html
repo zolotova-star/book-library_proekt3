@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>booklib.storage &mdash; документация Book Library 1.0</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/translations.js?v=cd1d70c9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Book Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Основная документация:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib.html">Модуль booklib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/models.html">Модуль models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.author"><code class="docutils literal notranslate"><span class="pre">Book.author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.year"><code class="docutils literal notranslate"><span class="pre">Book.year</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.genre"><code class="docutils literal notranslate"><span class="pre">Book.genre</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.quotes"><code class="docutils literal notranslate"><span class="pre">Book.quotes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.id"><code class="docutils literal notranslate"><span class="pre">Book.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.__init__"><code class="docutils literal notranslate"><span class="pre">Book.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.__str__"><code class="docutils literal notranslate"><span class="pre">Book.__str__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/models.html#booklib.models.Book.to_dict"><code class="docutils literal notranslate"><span class="pre">Book.to_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/commands.html">Модуль commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands"><code class="docutils literal notranslate"><span class="pre">LibraryCommands</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.storage"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.storage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.add_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.add_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.clear_database"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.clear_database()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.edit_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.edit_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.list_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.list_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.search_books"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/commands.html#booklib.commands.LibraryCommands.show_quotes"><code class="docutils literal notranslate"><span class="pre">LibraryCommands.show_quotes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/storage.html">Модуль storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage"><code class="docutils literal notranslate"><span class="pre">LibraryStorage</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.books</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.__init__"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage._connect"><code class="docutils literal notranslate"><span class="pre">LibraryStorage._connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.add_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.add_quote_to_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.add_quote_to_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.export_to_csv"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.get_all_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.get_all_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.load_books"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.load_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.remove_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_book()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.remove_quote"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.remove_quote()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/storage.html#booklib.storage.LibraryStorage.update_book"><code class="docutils literal notranslate"><span class="pre">LibraryStorage.update_book()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../booklib/filters.html">Модуль filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../booklib/filters.html#booklib.filters.BookFilter"><code class="docutils literal notranslate"><span class="pre">BookFilter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/filters.html#booklib.filters.BookFilter.search_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.search_books()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../booklib/filters.html#booklib.filters.BookFilter.sort_books"><code class="docutils literal notranslate"><span class="pre">BookFilter.sort_books()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Скрипты:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../main.html">Основной скрипт (main.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../create_db.html">Скрипт создания БД (create_db.py)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../create_db.html#create_db.create_database"><code class="docutils literal notranslate"><span class="pre">create_database()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Book Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Код модуля</a></li>
+      <li class="breadcrumb-item active">booklib.storage</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Исходный код booklib.storage</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Модуль для работы с хранением данных книжной библиотеки в PostgreSQL.</span>
+
+<span class="sd">Содержит класс LibraryStorage, который обеспечивает взаимодействие</span>
+<span class="sd">с базой данных PostgreSQL для операций CRUD (создание, чтение, обновление,</span>
+<span class="sd">удаление) с книгами и цитатами.</span>
+
+<span class="sd">Классы:</span>
+<span class="sd">    LibraryStorage: Основной класс для работы с хранилищем данных.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">psycopg2</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Book</span>
+
+
+<div class="viewcode-block" id="LibraryStorage">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage">[документация]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LibraryStorage</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс для управления хранением данных книжной библиотеки в PostgreSQL.</span>
+
+<span class="sd">    Обеспечивает загрузку, сохранение, обновление и удаление книг и цитат</span>
+<span class="sd">    из базы данных. Также поддерживает локальный кеш загруженных книг</span>
+<span class="sd">    для повышения производительности.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        books (list): Локальный кеш загруженных книг (объектов Book).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="LibraryStorage.__init__">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.__init__">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Инициализирует объект LibraryStorage и загружает книги из БД.</span>
+
+<span class="sd">        При создании объекта автоматически загружает все книги</span>
+<span class="sd">        из базы данных в локальный кеш.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">books</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_books</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage._connect">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage._connect">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Создает подключение к базе данных PostgreSQL.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            psycopg2.extensions.connection: Объект подключения к БД.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Параметры подключения жестко закодированы в методе.</span>
+<span class="sd">            Для продакшн-окружения рекомендуется выносить их в конфигурационный файл.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="n">dbname</span><span class="o">=</span><span class="s2">&quot;book_library&quot;</span><span class="p">,</span>
+            <span class="n">user</span><span class="o">=</span><span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+            <span class="n">password</span><span class="o">=</span><span class="s2">&quot;11111&quot;</span><span class="p">,</span>
+            <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+            <span class="n">port</span><span class="o">=</span><span class="s2">&quot;5432&quot;</span><span class="p">,</span>
+            <span class="n">client_encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.load_books">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.load_books">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_books</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Загружает все книги и их цитаты из базы данных.</span>
+
+<span class="sd">        Выполняет запросы к таблицам books и quotes для получения</span>
+<span class="sd">        полной информации о книгах и связанных с ними цитатах.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: Список объектов Book, загруженных из базы данных.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            В случае ошибки подключения или выполнения запроса</span>
+<span class="sd">            метод возвращает пустой список.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">books</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">()</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="c1"># Выборка всех книг с сортировкой по id</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT id, title, author, year, genre FROM books ORDER BY id&quot;</span><span class="p">)</span>
+            <span class="n">books_data</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+            <span class="k">for</span> <span class="n">book_data</span> <span class="ow">in</span> <span class="n">books_data</span><span class="p">:</span>
+                <span class="n">book_id</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">genre</span> <span class="o">=</span> <span class="n">book_data</span>
+
+                <span class="c1"># Загрузка цитат для текущей книги</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT quote FROM quotes WHERE book_id = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">book_id</span><span class="p">,))</span>
+                <span class="n">quotes_data</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+                <span class="n">quotes</span> <span class="o">=</span> <span class="p">[</span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">quotes_data</span><span class="p">]</span>
+
+                <span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">genre</span><span class="p">,</span> <span class="n">quotes</span><span class="p">)</span>
+                <span class="n">book</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">book_id</span>  <span class="c1"># Сохраняем связь между объектом Python и записью в БД</span>
+                <span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка загрузки: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">books</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.get_all_books">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.get_all_books">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_all_books</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает все книги из локального кеша.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list: Список всех объектов Book, загруженных в память.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Если требуется свежие данные из БД, следует вызвать load_books()</span>
+<span class="sd">            или пересоздать объект LibraryStorage.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.add_book">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.add_book">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Добавляет новую книгу в базу данных.</span>
+
+<span class="sd">        Сохраняет книгу в таблицу books и все связанные с ней цитаты</span>
+<span class="sd">        в таблицу quotes. Также обновляет локальный кеш.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            book (Book): Объект книги для добавления.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            После успешного добавления объекту book присваивается</span>
+<span class="sd">            сгенерированный БД идентификатор (id).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">()</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="c1"># Вставка книги и получение сгенерированного id</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                INSERT INTO books (title, author, year, genre)</span>
+<span class="s2">                VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">                RETURNING id</span>
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">genre</span><span class="p">))</span>
+
+            <span class="n">book_id</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c1"># Вставка всех цитат книги</span>
+            <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">book</span><span class="o">.</span><span class="n">quotes</span><span class="p">:</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    INSERT INTO quotes (book_id, quote)</span>
+<span class="s2">                    VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">                &quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">book_id</span><span class="p">,</span> <span class="n">quote</span><span class="p">))</span>
+
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="n">book</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">book_id</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка добавления: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.remove_book">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.remove_book">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book_id</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Удаляет книгу из базы данных по идентификатору.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            book_id (int): Идентификатор книги для удаления.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Благодаря каскадному удалению (ON DELETE CASCADE) все цитаты,</span>
+<span class="sd">            связанные с книгой, также будут автоматически удалены.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">()</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM books WHERE id = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">book_id</span><span class="p">,))</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c1"># Обновляем локальный кеш</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="n">book_id</span><span class="p">]</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка удаления: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.add_quote_to_book">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.add_quote_to_book">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_quote_to_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book_id</span><span class="p">,</span> <span class="n">quote</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Добавляет цитату к существующей книге.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            book_id (int): Идентификатор книги, к которой добавляется цитата.</span>
+<span class="sd">            quote (str): Текст цитаты для добавления.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None: Метод ничего не возвращает, но обновляет БД и локальный кеш.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">()</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                INSERT INTO quotes (book_id, quote)</span>
+<span class="s2">                VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">book_id</span><span class="p">,</span> <span class="n">quote</span><span class="p">))</span>
+
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c1"># Обновляем локальный кеш</span>
+            <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">book_id</span><span class="p">:</span>
+                    <span class="n">book</span><span class="o">.</span><span class="n">quotes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quote</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка добавления цитаты: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.remove_quote">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.remove_quote">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_quote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">book_id</span><span class="p">,</span> <span class="n">quote_index</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Удаляет цитату из книги по индексу.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            book_id (int): Идентификатор книги, из которой удаляется цитата.</span>
+<span class="sd">            quote_index (int): Индекс цитаты в списке (начиная с 0).</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True если цитата успешно удалена, False в противном случае.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Метод удаляет цитату как из базы данных, так и из локального кеша.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">()</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="c1"># Находим все цитаты книги для получения их id</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT id FROM quotes WHERE book_id = </span><span class="si">%s</span><span class="s2"> ORDER BY id&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">book_id</span><span class="p">,))</span>
+            <span class="n">quotes</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">quote_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">quotes</span><span class="p">):</span>
+                <span class="c1"># Получаем id конкретной цитаты по индексу</span>
+                <span class="n">quote_id</span> <span class="o">=</span> <span class="n">quotes</span><span class="p">[</span><span class="n">quote_index</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM quotes WHERE id = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">quote_id</span><span class="p">,))</span>
+                <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="kc">False</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c1"># Обновляем локальный кеш</span>
+            <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">book_id</span> <span class="ow">and</span> <span class="n">quote_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">quotes</span><span class="p">):</span>
+                        <span class="n">book</span><span class="o">.</span><span class="n">quotes</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">quote_index</span><span class="p">)</span>
+                        <span class="k">break</span>
+
+            <span class="k">return</span> <span class="n">success</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка удаления цитаты: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.export_to_csv">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.export_to_csv">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">export_to_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;export.csv&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Экспортирует все книги и цитаты в CSV файл.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            filename (str, optional): Имя файла для экспорта.</span>
+<span class="sd">                По умолчанию &#39;export.csv&#39;.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Цитаты в файле разделяются символом &#39;|&#39;.</span>
+<span class="sd">            Файл создается в кодировке UTF-8.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;genre&#39;</span><span class="p">,</span> <span class="s1">&#39;quotes&#39;</span><span class="p">])</span>
+
+            <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">:</span>
+                <span class="n">quotes_str</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">quotes</span><span class="p">)</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">book</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">book</span><span class="o">.</span><span class="n">genre</span><span class="p">,</span> <span class="n">quotes_str</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="LibraryStorage.update_book">
+<a class="viewcode-back" href="../../booklib/storage.html#booklib.storage.LibraryStorage.update_book">[документация]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_book</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">old_book</span><span class="p">,</span> <span class="n">new_book</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Обновляет информацию о книге в базе данных.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            old_book (Book): Исходный объект книги (с оригинальными данными).</span>
+<span class="sd">            new_book (Book): Обновленный объект книги с новыми данными.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            Метод обновляет запись в БД и локальный кеш.</span>
+<span class="sd">            Идентификатор книги (id) остается неизменным.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">()</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+            <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                UPDATE books </span>
+<span class="s2">                SET title = </span><span class="si">%s</span><span class="s2">, author = </span><span class="si">%s</span><span class="s2">, year = </span><span class="si">%s</span><span class="s2">, genre = </span><span class="si">%s</span>
+<span class="s2">                WHERE id = </span><span class="si">%s</span>
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">new_book</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">new_book</span><span class="o">.</span><span class="n">genre</span><span class="p">,</span> <span class="n">old_book</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c1"># Обновляем локальный кеш</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">book</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">old_book</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">books</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_book</span>
+                    <span class="k">break</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ошибка обновления: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, Dasha. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
