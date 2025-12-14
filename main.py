@@ -1,8 +1,46 @@
+"""Основной модуль командной строки для управления книжной библиотекой.
+
+Предоставляет интерфейс командной строки для работы с книжной библиотекой
+через PostgreSQL. Поддерживает все основные операции CRUD для книг и цитат,
+а также дополнительные функции экспорта, импорта и управления базой данных.
+
+Основные команды:
+    create-db-Создание базы данных и таблиц
+    check- Проверка подключения и состояния БД
+    add-Добавление новой книги
+    remove-Удаление книги
+    list-Просмотр списка книг с сортировкой
+    search-Поиск книг по критериям
+    add-quote-Добавление цитаты к книге
+    remove-quote-Удаление цитаты из книги
+    show-quotes-Просмотр цитат
+    export-Экспорт данных в CSV
+    clear-db-Очистка всех данных из таблиц
+    edit-Редактирование информации о книге
+
+Примеры использования:
+    python main.py create-db
+    python main.py add --title "Война и мир" --author "Толстой" --year 1869 --genre "Роман"
+    python main.py list --sort-by author --reverse
+    python main.py search --author "Толстой" --genre "Роман"
+"""
+
 import argparse
 from booklib import LibraryCommands
 
 
 def main():
+    """Основная функция обработки командной строки.
+
+    Создает парсер аргументов, определяет все доступные команды и их параметры,
+    затем вызывает соответствующие методы LibraryCommands для выполнения операций.
+
+    Raises:
+        SystemExit: При вызове с флагом --help или при ошибках парсинга аргументов.
+
+    Returns:
+        None: Функция ничего не возвращает, но выводит результаты в консоль.
+    """
     # Создаем парсер аргументов командной строки
     parser = argparse.ArgumentParser(description='Книжная библиотека.')
     subparsers = parser.add_subparsers(dest='command')
@@ -90,12 +128,13 @@ def main():
                 user="postgres",
                 password="11111",
                 host="localhost",
-                client_encoding = 'utf8'
+                client_encoding='utf8'
             )
 
             cur = conn.cursor()
-            cur.execute("SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = 'books')")
-            books_table_exists = cur.fetchone()[0]
+            cur.execute(
+                "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = 'books')")  # возвращает true или false поиск таблицы книги
+            books_table_exists = cur.fetchone()[0]  # t или f
 
             cur.execute("SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = 'quotes')")
             quotes_table_exists = cur.fetchone()[0]
@@ -115,7 +154,7 @@ def main():
             print(f"Книг в базе: {books_count}")
 
         except psycopg2.OperationalError as e:
-            # Ошибка подключения (база не существует или нет доступа)
+            # Ошибка подключения
             print(f"Ошибка подключения: {e}")
 
     commands = LibraryCommands()
@@ -167,5 +206,11 @@ def main():
             args.new_year, args.new_genre
         )
 
+
 if __name__ == '__main__':
+    """Точка входа при прямом запуске скрипта.
+
+    При запуске скрипта напрямую вызывает функцию main(),
+    которая обрабатывает аргументы командной строки.
+    """
     main()
